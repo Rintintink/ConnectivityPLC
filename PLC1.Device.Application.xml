@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="3.5.15.30" runtimeid="3.5.15.40" libversion="3.5.15.20" compiler="3.5.15.40" lmm="3.5.15.0" profile="CODESYS V3.5 SP15 Patch 4+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="PLC1" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeUserDef name="T_FB_SCADA" size="0" nativesize="4" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_SCADA" />
+    <TypeSimple name="T_BIT_X_0" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="0" />
+    <TypeSimple name="T_BIT_X_1" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="1" />
+    <TypeSimple name="T_BIT_X_2" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="2" />
+    <TypeSimple name="T_BIT_X_3" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="3" />
+    <TypeSimple name="T_BIT_X_4" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="4" />
+    <TypeSimple name="T_BIT_X_5" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="5" />
+    <TypeSimple name="T_BIT_X_6" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="6" />
+    <TypeSimple name="T_BIT_X_7" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="7" />
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_STRING_20_" size="21" swapsize="0" typeclass="String" iecname="STRING(20)" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeUserDef name="T_FB_PRG1" size="3" nativesize="8" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_PRG1">
+      <UserDefElement iecname="PRGStap" type="T_INT" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="ActionSuccesful" type="T_BOOL" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_R_TRIG" size="2" nativesize="8" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="R_TRIG">
+      <UserDefElement iecname="CLK" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="1" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TON" size="16" nativesize="28" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TON">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="8" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="12" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TP" size="16" nativesize="24" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TP">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="8" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="12" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_FB_Counters" size="79" nativesize="160" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_Counters">
+      <UserDefElement iecname="t_timerLow" type="T_TP" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="t_timerHigh" type="T_TON" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="b_eenHzClock" type="T_BOOL" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="b_productieTimerActief" type="T_BOOL" byteoffset="33" vartype="VAR" />
+      <UserDefElement iecname="i_productieTimerSec" type="T_DINT" byteoffset="36" vartype="VAR" />
+      <UserDefElement iecname="i_productieTimerMin" type="T_DINT" byteoffset="40" vartype="VAR" />
+      <UserDefElement iecname="i_productieTimerHr" type="T_DINT" byteoffset="44" vartype="VAR" />
+      <UserDefElement iecname="s_tijdFormatted" type="T_STRING_20_" byteoffset="48" vartype="VAR" />
+      <UserDefElement iecname="b_pTrigProductieTeller" type="T_R_TRIG" byteoffset="69" vartype="VAR" />
+      <UserDefElement iecname="b_pTrigType1" type="T_R_TRIG" byteoffset="71" vartype="VAR" />
+      <UserDefElement iecname="b_pTrigType2" type="T_R_TRIG" byteoffset="73" vartype="VAR" />
+      <UserDefElement iecname="b_pTrigType3" type="T_R_TRIG" byteoffset="75" vartype="VAR" />
+      <UserDefElement iecname="b_pTrigType4" type="T_R_TRIG" byteoffset="77" vartype="VAR" />
+    </TypeUserDef>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="DB_Alias">
+        <Node name="b_simulateIO" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_boxMagazineEmpty" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_driveError" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_driveHomed" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_driveReady" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_E_stop" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_feedCylinderInitPos" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_foldingMechanismInitPos" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_iReserve" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_panelPushbttnReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_panelPushbttnStart" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_panelPushbttnStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_panelSwitchAutoMan" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_sensorConveyorEind" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_sensorConveyorMid" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_sensorConveyorStart" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_setupCylinderInitPos" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_workpieceAvailable" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_ZAxisBottom" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_ZAxisMid" type="T_BOOL" access="ReadWrite" />
+        <Node name="ix_ZAxisTop" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_advanceFeedCylinder" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_advanceFoldingMechanism" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_advanceLockCylinder" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_advanceSetupCylinder" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_advIntermedCylinder" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_conveyorForward" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_conveyorReverse" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_openGripper" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_oReserve" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_qReserve" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_retractStopper" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_XAxisDrive_Bit0" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_XAxisDrive_Bit1" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_XAxisEnable" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_XAxisStartMovement" type="T_BOOL" access="ReadWrite" />
+        <Node name="qx_ZAxisAdvance" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="DB_SCADA">
+        <Node name="SCADA_ModusAUTO" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCADA_ModusFAULT" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCADA_ModusHAND" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="DIO">
+        <Node name="ix_boxMagazineEmpty" type="T_BIT_X_7" access="ReadWrite" directaddress="%IX7.7" />
+        <Node name="ix_driveError" type="T_BIT_X_2" access="ReadWrite" directaddress="%IX2.2" />
+        <Node name="ix_driveHomed" type="T_BIT_X_1" access="ReadWrite" directaddress="%IX2.1" />
+        <Node name="ix_driveReady" type="T_BIT_X_0" access="ReadWrite" directaddress="%IX2.0" />
+        <Node name="ix_E_stop" type="T_BIT_X_3" access="ReadWrite" directaddress="%IX7.3" />
+        <Node name="ix_feedCylinderInitPos" type="T_BIT_X_4" access="ReadWrite" directaddress="%IX7.4" />
+        <Node name="ix_foldingMechanismInitPos" type="T_BIT_X_6" access="ReadWrite" directaddress="%IX7.6" />
+        <Node name="ix_iReserve" type="T_BIT_X_3" access="ReadWrite" directaddress="%IX2.3" />
+        <Node name="ix_panelPushbttnReset" type="T_BIT_X_3" access="ReadWrite" directaddress="%IX3.3" />
+        <Node name="ix_panelPushbttnStart" type="T_BIT_X_0" access="ReadWrite" directaddress="%IX3.0" />
+        <Node name="ix_panelPushbttnStop" type="T_BIT_X_1" access="ReadWrite" directaddress="%IX3.1" />
+        <Node name="ix_panelSwitchAutoMan" type="T_BIT_X_2" access="ReadWrite" directaddress="%IX3.2" />
+        <Node name="ix_sensorConveyorEind" type="T_BIT_X_2" access="ReadWrite" directaddress="%IX7.2" />
+        <Node name="ix_sensorConveyorMid" type="T_BIT_X_1" access="ReadWrite" directaddress="%IX7.1" />
+        <Node name="ix_sensorConveyorStart" type="T_BIT_X_0" access="ReadWrite" directaddress="%IX7.0" />
+        <Node name="ix_setupCylinderInitPos" type="T_BIT_X_5" access="ReadWrite" directaddress="%IX7.5" />
+        <Node name="ix_workpieceAvailable" type="T_BIT_X_7" access="ReadWrite" directaddress="%IX2.7" />
+        <Node name="ix_ZAxisBottom" type="T_BIT_X_6" access="ReadWrite" directaddress="%IX2.6" />
+        <Node name="ix_ZAxisMid" type="T_BIT_X_5" access="ReadWrite" directaddress="%IX2.5" />
+        <Node name="ix_ZAxisTop" type="T_BIT_X_4" access="ReadWrite" directaddress="%IX2.4" />
+        <Node name="qx_advanceFeedCylinder" type="T_BIT_X_4" access="ReadWrite" directaddress="%QX6.4" />
+        <Node name="qx_advanceFoldingMechanism" type="T_BIT_X_7" access="ReadWrite" directaddress="%QX6.7" />
+        <Node name="qx_advanceLockCylinder" type="T_BIT_X_6" access="ReadWrite" directaddress="%QX6.6" />
+        <Node name="qx_advanceSetupCylinder" type="T_BIT_X_5" access="ReadWrite" directaddress="%QX6.5" />
+        <Node name="qx_advIntermedCylinder" type="T_BIT_X_5" access="ReadWrite" directaddress="%QX4.5" />
+        <Node name="qx_conveyorForward" type="T_BIT_X_0" access="ReadWrite" directaddress="%QX6.0" />
+        <Node name="qx_conveyorReverse" type="T_BIT_X_1" access="ReadWrite" directaddress="%QX6.1" />
+        <Node name="qx_openGripper" type="T_BIT_X_6" access="ReadWrite" directaddress="%QX4.6" />
+        <Node name="qx_oReserve" type="T_BIT_X_7" access="ReadWrite" directaddress="%QX4.7" />
+        <Node name="qx_qReserve" type="T_BIT_X_3" access="ReadWrite" directaddress="%QX6.3" />
+        <Node name="qx_retractStopper" type="T_BIT_X_2" access="ReadWrite" directaddress="%QX6.2" />
+        <Node name="qx_XAxisDrive_Bit0" type="T_BIT_X_0" access="ReadWrite" directaddress="%QX4.0" />
+        <Node name="qx_XAxisDrive_Bit1" type="T_BIT_X_1" access="ReadWrite" directaddress="%QX4.1" />
+        <Node name="qx_XAxisEnable" type="T_BIT_X_2" access="ReadWrite" directaddress="%QX4.2" />
+        <Node name="qx_XAxisStartMovement" type="T_BIT_X_3" access="ReadWrite" directaddress="%QX4.3" />
+        <Node name="qx_ZAxisAdvance" type="T_BIT_X_4" access="ReadWrite" directaddress="%QX4.4" />
+      </Node>
+      <Node name="GVL">
+        <Node name="b_simulatie" type="T_BOOL" access="ReadWrite" />
+        <Node name="b_StartPRG" type="T_BOOL" access="ReadWrite" />
+        <Node name="b_StopPRG" type="T_BOOL" access="ReadWrite" />
+        <Node name="FB_Counters" type="T_FB_Counters" access="ReadWrite" />
+        <Node name="FB_PRG1" type="T_FB_PRG1" access="ReadWrite" />
+        <Node name="ModusAUTO" type="T_BOOL" access="ReadWrite" />
+        <Node name="ModusFAULT" type="T_BOOL" access="ReadWrite" />
+        <Node name="ModusHAND" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="POU">
+        <Node name="FB_SCADA_Comms" type="T_FB_SCADA" access="ReadWrite" />
+        <Node name="Foutcode" type="T_STRING" access="ReadWrite" />
+        <Node name="PRGStep" type="T_INT" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
