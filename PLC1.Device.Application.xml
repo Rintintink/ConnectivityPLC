@@ -56,7 +56,6 @@
         <Node name="b_StartPRG" type="T_BOOL" access="ReadWrite" />
         <Node name="b_StopPRG" type="T_BOOL" access="ReadWrite" />
         <Node name="ModusAUTO" type="T_BOOL" access="ReadWrite" />
-        <Node name="ModusFAULT" type="T_BOOL" access="ReadWrite" />
         <Node name="ModusHAND" type="T_BOOL" access="ReadWrite" />
       </Node>
       <Node name="POU">
